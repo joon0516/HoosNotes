@@ -2,26 +2,91 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.main {
+  width: 150vw;
+  min-height: 150vh;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  padding: 120px 24px 160px 24px;
+  pointer-events: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.main:before {
+  background-color: #f1f1ef;
+  position: absolute;
+  content: "";
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  top: 0;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.UVAOrange {
+  color: #e57200;
+}
+
+.UVABlue {
+  color: #232d4b;
+}
+
+/*------- Tailwind Styling  ----------*/
+.flex-center {
+  @apply flex justify-center items-center;
+}
+
+/* Layout */
+.app {
+  @apply min-h-screen relative z-10 flex flex-col max-w-7xl mx-auto sm:px-16 px-6;
+}
+.logo_text {
+  @apply font-bold text-2xl;
+}
+.head_text {
+  @apply mt-5 text-5xl font-bold;
+}
+
+/* Navbar  */
+.dropdown {
+  @apply absolute right-0 top-full mt-3 w-full p-5 rounded-lg bg-white min-w-[210px] flex flex-col gap-2 justify-end items-end;
+}
+.dropdown_link {
+  @apply text-sm text-gray-700 hover:text-orange-500 font-medium;
+}
+.nav_btn {
+  @apply bg-transparent text-black font-semibold hover:text-orange-500 py-2 px-4 border border-black hover:border-orange-500 rounded-full;
+}
+
+/* Feed */
+.feed_search {
+  @apply mt-16 mb-8 mx-auto w-full max-w-xl flex justify-center items-center flex-col gap-2;
+}
+.search_bar {
+  @apply block w-full p-3 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-orange-500 focus:border-orange-500;
+}
+
+/* Profile */
+.profile_text {
+  @apply font-semibold text-2xl;
+}
+.profile_desc {
+  @apply text-xl;
+}
+
+/* Post Card */
+.post_card {
+  @apply inline-block bg-gray-100 shadow-md hover:scale-[1.02] p-3 m-3 rounded-lg max-w-sm max-h-96;
+}
+
+/* Form */
+.form_textarea {
+  @apply w-full flex rounded-lg h-[200px] p-3 text-sm outline-0 resize-none;
+}
+.form_input {
+  @apply w-full flex rounded-lg p-2 text-sm outline-0;
+}
+
+/* Footer */
+.footer {
+  @apply  max-w-7xl mx-auto sm:pr-16 pr-6 w-[calc(100%-2rem)] lg:w-[calc(100%-4rem)] absolute bottom-5;
 }
