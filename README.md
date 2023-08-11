@@ -1,4 +1,4 @@
-#HoosNotes
+# HoosNotes
 
 HoosNotes is a platform where students at UVA can share good study materials.
 
