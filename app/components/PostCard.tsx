@@ -47,7 +47,7 @@ const PostCard = ({ post, handleTagClick, handleEdit, handleDelete }: any) => {
             {post.link}
           </a>
         </div>
-        <p className="font-medium">Desciprtion: </p>
+        <p className="font-medium">Description: </p>
         <p className="max-h-44 overflow-y-auto">{post.description}</p>
         <div className="flex justify-between mt-2">
           <p

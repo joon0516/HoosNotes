@@ -9,7 +9,7 @@ const Footer = () => {
           Copyright &copy; {new Date().getFullYear()} Joonhyuk Ko. All rights
           reserved.
         </p>
-        <a href="https://github.com/joon0516">
+        <a href="https://github.com/joon0516/HoosNotes">
           <AiFillGithub style={{ fontSize: "30", color: "#1c1c1e" }} />
         </a>
       </div>
