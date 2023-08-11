@@ -1,6 +1,8 @@
-# HoosNotes
+#<span style="color:#e57200"> Hoos</span><span style="color:#232d4b">Notes</span>
 
-HoosNotes is a platform where students at UVA can share good study materials.
+<span style="color:#e57200"> Hoos</span><span style="color:#232d4b">Notes</span> is a platform where students at UVA can share good study materials.
+
+![HoosNotes.gif](/public/assets/images/HoosNotes.gif)
 
 You can visit the website <a href="https://hoos-notes.vercel.app" target="_blank">here</a>.
 
