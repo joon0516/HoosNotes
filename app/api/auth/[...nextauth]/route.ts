@@ -1,10 +1,10 @@
-import NextAuth, { AuthOptions } from "next-auth";
+import NextAuth, { NextAuthOptions } from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 
 import User from "@/models/user";
 import { connectToDB } from "@/utils/database";
 
-const handler: AuthOptions = NextAuth({
+const authOptions: NextAuthOptions = {
   providers: [
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID as string,
@@ -44,6 +44,7 @@ const handler: AuthOptions = NextAuth({
       }
     },
   },
-});
+};
 
+const handler = NextAuth(authOptions);
 export { handler as GET, handler as POST };
